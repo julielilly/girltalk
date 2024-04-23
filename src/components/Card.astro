@@ -1,0 +1,53 @@
+---
+const { src, text, locationId } = Astro.props;
+---
+
+<div class="card_effect">
+<a class="card" href={locationId}>
+    <img src={src}>
+   <p>{text}</p>
+</a>
+</div>
+
+<style>
+
+.card {
+    background-color: var(--Dreamy_white);
+    padding: 32px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 40px;
+}
+
+.card:hover {
+    margin-bottom: 0;
+    margin-top: 40px;
+}
+
+.card_effect:hover {
+   background-color: var(--Power_blue);
+}
+
+.card_effect {
+    width: 300px;
+    height: 340px;
+    border-radius: 10px;
+}
+
+img {
+    width: 150px;
+    padding-bottom: 16px;
+}
+
+p {
+    font-weight: 400;
+    font-variation-settings: "wdth" 125;  
+}
+
+</style>
